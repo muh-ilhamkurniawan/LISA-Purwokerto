@@ -111,4 +111,20 @@ def generate_answer():
     st.session_state.current_sequence = current_sequence if user_message != "selesai" else ""
 
 # Menempatkan input teks
-input_area.text_input("Talk to the bot (Input angka)", key="input_text", on_change=generate_answer, input_type="number")
+# Menempatkan input teks dengan tipe input "number"
+st.markdown("""
+    <style>
+        @media (max-width: 768px) {
+            input[type="text"]::-webkit-outer-spin-button,
+            input[type="text"]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            input[type="text"] {
+                -moz-appearance: textfield;
+            }
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+input_area.text_input("Talk to the bot (Input angka - masukkan angka disini)", key="input_text", on_change=generate_answer)
