@@ -111,4 +111,4 @@ def generate_answer():
     st.session_state.current_sequence = current_sequence if user_message != "selesai" else ""
 
 # Menempatkan input teks
-input_area.text_input("Talk to the bot (Input angka)", key="input_text", on_change=generate_answer)
+input_area.text_input("Talk to the bot (Input angka)", key="input_text", on_change=generate_answer, input_type="number")
