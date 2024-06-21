@@ -69,7 +69,7 @@ def generate_answer():
     current_node = st.session_state.current_node
     current_sequence = st.session_state.current_sequence
 
-    if user_message in ["selesai", "6"]:
+    if user_message in ["selesai", "6", "00"]:
         next_node = "selesai"  # Mengatur kembali ke awal
         current_sequence = ""  # Mengosongkan sequence
     elif user_message in ["menu", "kembali", "0", "9"]:
