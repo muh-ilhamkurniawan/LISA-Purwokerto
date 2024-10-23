@@ -21,7 +21,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Definisikan pasangan pertanyaan dan jawaban
+# Definisikan pasangan pertanyaan dan jawaban, anda bisa memperbarui dan menambahkan sesuai dengan keinginan
 qa_pairs = {
     "halo": "Halo selamat datang di KPw Bank Indonesia Purwokerto, silahkan pilih informasi yang diinginkan:\n1. Tentang Bank Indonesia\n2. Informasi Kantor Perwakilan Bank Indonesia Purwokerto\n3. Layanan yang tersedia di Bank Indonesia Purwokerto\n4. Magang dan PKL\n5. Survei, Pengaduan, dan Informasi Publik\n6. Selesai",
 
@@ -75,7 +75,7 @@ if "history" not in st.session_state:
     st.session_state.current_node = "halo"
     st.session_state.current_sequence = ""
 
-    # Tampilkan pesan selamat datang pada awal chat jika history belum ada
+    # Tampilkan pesan selamat datang pada awal chat jika history belum ada atau website pertama kali dibuka
     st.session_state.history.append({"message": "Halo selamat datang di KPw Bank Indonesia Purwokerto, silahkan pilih informasi yang diinginkan:\n1. Tentang Bank Indonesia\n2. Informasi Kantor Perwakilan Bank Indonesia Purwokerto\n3. Layanan yang tersedia di Bank Indonesia Purwokerto\n4. Magang dan PKL\n5. Survei, Pengaduan, dan Informasi Publik\n6. Selesai", "is_user": False})
 
 
